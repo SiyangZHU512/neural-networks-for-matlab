@@ -5,7 +5,6 @@ clc
 warning off
 %%
 load fisheriris
-
 species=grp2idx(species)
 meas=mapminmax(meas)
 temp=randperm(size(species,1))
@@ -73,7 +72,7 @@ ylabel('classes')
 string = {'LSTM netwrok';
           ['estimation accuracy= ' num2str(error2) '%']};
 title(string)
-figure
+figure(2)
 cm=confusionchart(I_test,T_sim2)
 cm.Title='confusion matrix for test data'
 cm.ColumnSummary='column-normalized'
