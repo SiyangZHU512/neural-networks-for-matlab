@@ -55,8 +55,8 @@ T_sim2=predict(net,p_test)
 T_sim1=mapminmax('reverse',T_sim1,ps_output)'
 T_sim2=mapminmax('reverse',T_sim2,ps_output)'
 %%
-MSE1=sqrt(sum(I_train-T_sim1)^2./size(I_train,2))
-MSE2=sqrt(sum(I_test-T_sim2)^2./size(I_test,2))
+MSE1=sqrt(mean(I_train-T_sim1)^.2))
+MSE2=sqrt(mean(I_test-T_sim2)^.2))
 %%
 analyzeNetwork(layers)
 %%
