@@ -68,8 +68,8 @@ T_sim2=predict(net,p_test)
 T_sim1=mapminmax('reverse',T_sim1,ps_output)'
 T_sim2=mapminmax('reverse',T_sim2,ps_output)'
 %%
-MSE1=sqrt(sum((I_train-T_sim1).^2)/N)
-MSE2=sqrt(sum((I_test-T_sim2).^2)/N)
+MSE1=sqrt(mean((I_train-T_sim1).^2))
+MSE2=sqrt(mean((I_test-T_sim2).^2))
 %%
 figure(1)
 plot(1:N,I_test,'b-',1:N,T_sim2,'r-')
